@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huayan.hbms.mapper.CoffeeMapper">
+  <resultMap id="Base_Coffer" type="Coffee">
+      <id property="coffeeId" column="coffee_id"/>
+      <result property="coffeeImage" column="coffee_image" />
+      <result property="coffeeType" column="coffee_type" />
+      <result property="coffeePrice" column="coffee_price" />
+      <result property="coffeeDetails" column="coffee_details" />
+      <result property="coffeeStatu" column="coffee_statu"/>
+      <result property="typeId" column="type_id"/>
+  </resultMap>
+    
+</mapper>

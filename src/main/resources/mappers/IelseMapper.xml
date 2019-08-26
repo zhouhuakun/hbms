@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huayan.hbms.mapper.IelseMapper" >
+  <resultMap id="BaseResultMap" type="Ielse" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="else_id" property="elseId" jdbcType="INTEGER" />
+    <result column="else_image" property="elseImage" jdbcType="VARCHAR" />
+    <result column="else_type" property="elseType" jdbcType="VARCHAR" />
+    <result column="else_price" property="elsePrice" jdbcType="DECIMAL" />
+    <result column="else_details" property="elseDetails" jdbcType="VARCHAR" />
+    <result column="else_statu" property="elseStatu" jdbcType="INTEGER" />
+    <result column="type_id" property="typeId" jdbcType="VARCHAR" />
+  </resultMap>
+
+</mapper>

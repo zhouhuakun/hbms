@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huayan.hbms.mapper.SteakMapper">
+  <resultMap id="Base_Steak" type="Steak">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="steak_id" jdbcType="INTEGER" property="steakId" />
+    <result column="steak_image" jdbcType="VARCHAR" property="steakImage" />
+    <result column="steak_type" jdbcType="VARCHAR" property="steakType" />
+    <result column="steak_price" jdbcType="DECIMAL" property="steakPrice" />
+    <result column="steak_details" jdbcType="VARCHAR" property="steakDetails" />
+    <result column="steak_statu" jdbcType="INTEGER" property="steakStatu" />
+    <result column="type_id" jdbcType="VARCHAR" property="typeId" />
+  </resultMap>
+
+</mapper>

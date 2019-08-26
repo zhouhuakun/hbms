@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huayan.hbms.mapper.CoffeeShopMapper">
+    <resultMap id="baseResult" type="com.huayan.hbms.domain.vo.CoffeeShopVo">
+      <id property="sid" column="sid" />
+      <result property="typeId" column="type_id" />
+      <result property="type" column="type" />
+      <collection property="coffeeList" resultMap="com.huayan.hbms.mapper.CoffeeMapper.Base_Coffer">
+
+      </collection>
+      <collection property="steakList" resultMap="com.huayan.hbms.mapper.SteakMapper.Base_Steak">
+
+      </collection>
+      <collection property="iceList" resultMap="com.huayan.hbms.mapper.IceMapper.Base_Ice">
+
+      </collection>
+      <collection property="ielseList" resultMap="com.huayan.hbms.mapper.IelseMapper.BaseResultMap">
+
+      </collection>
+    </resultMap>
+    <select id="findAll" resultMap="baseResult">
+        SELECT * FROM coffee_shop cs
+                          LEFT JOIN coffee c ON cs.type_id=c.type_id
+                          LEFT JOIN steak s ON cs.type_id=s.type_id
+                          LEFT JOIN ice i ON cs.type_id=i.type_id
+                          LEFT JOIN ielse i2 ON cs.type_id=i2.type_id
+    </select>
+
+</mapper>

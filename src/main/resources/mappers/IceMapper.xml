@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huayan.hbms.mapper.IceMapper">
+  <resultMap id="Base_Ice" type="Ice">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ice_id" jdbcType="INTEGER" property="iceId" />
+    <result column="ice_image" jdbcType="VARCHAR" property="iceImage" />
+    <result column="ice_type" jdbcType="VARCHAR" property="iceType" />
+    <result column="ice_price" jdbcType="DECIMAL" property="icePrice" />
+    <result column="ice_details" jdbcType="VARCHAR" property="iceDetails" />
+    <result column="ice_statu" jdbcType="INTEGER" property="iceStatu" />
+    <result column="type_id" jdbcType="VARCHAR" property="typeId" />
+  </resultMap>
+
+</mapper>
