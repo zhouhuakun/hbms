@@ -13,5 +13,32 @@
     <result column="else_statu" property="elseStatu" jdbcType="INTEGER" />
     <result column="type_id" property="typeId" jdbcType="VARCHAR" />
   </resultMap>
-
+  <select id="findbyId" resultMap="BaseResultMap">
+    SELECT  else_id, else_image, else_type, else_price, else_details, else_statu, type_id
+    FROM ielse WHERE else_id=#{elseId}
+  </select>
+  <update id="update">
+    UPDATE ielse  SET
+    else_type =#{ielse.elseType} ,
+    else_details= #{ielse.elseDetails},
+    else_price=#{ielse.elsePrice} ,
+    else_image=#{ielse.elseImage}
+    WHERE else_id=#{elseId};
+  </update>
+  <update id="delete">
+    UPDATE ielse SET else_statu=0
+    WHERE else_id=#{elseId};
+  </update>
+  <insert id="insert">
+    INSERT INTO
+    ielse(else_id, else_image, else_type, else_price, else_details, else_statu, type_id)
+    VALUE
+    (#{ielse.elseId},
+    #{ielse.elseImage},
+    #{ielse.elseType},
+    #{ielse.elsePrice},
+    #{ielse.elseDetails},
+    #{ielse.elseStatu},
+    #{ielse.typeId})
+  </insert>
 </mapper>

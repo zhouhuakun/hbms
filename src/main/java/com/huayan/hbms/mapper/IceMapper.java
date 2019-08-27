@@ -1,7 +1,13 @@
 package com.huayan.hbms.mapper;
 
+
 import com.huayan.hbms.domain.entity.Ice;
-import tk.mybatis.mapper.common.Mapper;
+import org.apache.ibatis.annotations.Param;
+
 
 public interface IceMapper  {
+    Ice findbyId(@Param("IceId") int id);
+    int update(@Param("IceId")int id,@Param("ice") Ice ice);
+    int delete(@Param("IceId")int id);
+    int insert(@Param("ice") Ice ice);
 }

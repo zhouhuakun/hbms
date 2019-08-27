@@ -13,5 +13,32 @@
     <result column="steak_statu" jdbcType="INTEGER" property="steakStatu" />
     <result column="type_id" jdbcType="VARCHAR" property="typeId" />
   </resultMap>
-
+  <select id="findbyId" resultMap="Base_Steak">
+    SELECT  steak_id, steak_image, steak_type, steak_price, steak_details, steak_statu, type_id
+    FROM steak WHERE steak_id=#{SteakId}
+  </select>
+  <update id="update">
+    UPDATE steak SET
+    steak_type =#{steak.steakType} ,
+    steak_details= #{steak.steakDetails},
+    steak_price=#{steak.steakPrice} ,
+    steak_image=#{steak.steakImage}
+    WHERE steak_id=#{SteakId};
+  </update>
+  <update id="delete">
+    UPDATE steak SET steak_statu=0
+    WHERE steak_id=#{SteakId};
+  </update>
+  <insert id="insert">
+    INSERT INTO
+    steak(steak_id, steak_image, steak_type, steak_price, steak_details, steak_statu, type_id)
+    VALUE
+    (#{steak.steakId},
+    #{steak.steakImage},
+    #{steak.steakType},
+    #{steak.steakPrice},
+    #{steak.steakDetails},
+    #{steak.steakStatu},
+    #{steak.typeId})
+  </insert>
 </mapper>

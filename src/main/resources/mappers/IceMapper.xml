@@ -13,5 +13,32 @@
     <result column="ice_statu" jdbcType="INTEGER" property="iceStatu" />
     <result column="type_id" jdbcType="VARCHAR" property="typeId" />
   </resultMap>
-
+<select id="findbyId" resultMap="Base_Ice">
+    SELECT  ice_id,ice_image,ice_type,ice_price,ice_details,ice_statu,type_id
+  FROM ice WHERE ice_id=#{IceId}
+</select>
+  <update id="update">
+    UPDATE ice  SET
+    ice_type =#{ice.iceType} ,
+    ice_details= #{ice.iceDetails},
+    ice_price=#{ice.icePrice} ,
+    ice_image=#{ice.iceImage}
+    WHERE ice_id=#{ice.iceId};
+  </update>
+  <update id="delete">
+    UPDATE ice SET ice_statu=0
+    WHERE ice_id=#{IceId};
+  </update>
+  <insert id="insert">
+    INSERT INTO
+    ice(ice_id, ice_image, ice_type, ice_price, ice_details, ice_statu, type_id)
+    VALUE
+    (#{ice.iceId},
+    #{ice.iceImage},
+    #{ice.iceType},
+    #{ice.icePrice},
+    #{ice.iceDetails},
+    #{ice.iceStatu},
+    #{ice.typeId})
+  </insert>
 </mapper>

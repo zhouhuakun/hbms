@@ -10,5 +10,37 @@
       <result property="coffeeStatu" column="coffee_statu"/>
       <result property="typeId" column="type_id"/>
   </resultMap>
-    
+    <select id="findbyId" resultMap="Base_Coffer">
+        SELECT c.coffee_id,c.coffee_details,c.coffee_image,c.coffee_price,c.coffee_statu,c.coffee_type,c.type_id
+        FROM coffee c
+        WHERE c.coffee_id=#{coffeeId}
+    </select>
+
+    <update id="delete" >
+        UPDATE coffee c SET c.coffee_statu=0
+        WHERE c.coffee_id=#{coffeeId};
+    </update>
+
+    <update id="update">
+        UPDATE coffee c SET
+      c.coffee_type =#{coffee.coffeeType} ,
+      c.coffee_details= #{coffee.coffeeDetails},
+        c.coffee_price=#{coffee.coffeePrice} ,
+        c.coffee_image=#{coffee.coffeeImage}
+      WHERE c.coffee_id=#{coffeeId};
+    </update>
+
+    <insert id="insert">
+        INSERT INTO
+        coffee(coffee_id, coffee_image, coffee_type, coffee_price, coffee_details,coffee_statu, type_id)
+        VALUE
+       (#{coffee.coffeeId},
+        #{coffee.coffeeImage},
+        #{coffee.coffeeType},
+        #{coffee.coffeePrice},
+        #{coffee.coffeeDetails},
+        #{coffee.coffeeStatu},
+        #{coffee.typeId})
+
+    </insert>
 </mapper>
