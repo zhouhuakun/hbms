@@ -959,156 +959,165 @@
     <table id="247" parent="3" name="ice"/>
     <table id="248" parent="3" name="ielse"/>
     <table id="249" parent="3" name="imgas"/>
-    <table id="250" parent="3" name="steak"/>
-    <column id="251" parent="242" name="aid">
+    <table id="250" parent="3" name="navigation"/>
+    <table id="251" parent="3" name="steak"/>
+    <column id="252" parent="242" name="aid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="242" name="city">
+    <column id="253" parent="242" name="city">
       <Position>2</Position>
       <Comment>现在居住地</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="242" name="native_place">
+    <column id="254" parent="242" name="native_place">
       <Position>3</Position>
       <Comment>籍贯</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="242" name="eid">
+    <column id="255" parent="242" name="eid">
       <Position>4</Position>
       <Comment>用户ID</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="255" parent="242" name="fk_address_eid">
+    <index id="256" parent="242" name="fk_address_eid">
       <ColNames>eid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="256" parent="242" name="PRIMARY">
+    <key id="257" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>aid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="257" parent="242" name="fk_address_eid">
+    <foreign-key id="258" parent="242" name="fk_address_eid">
       <ColNames>eid</ColNames>
       <RefSchemaName>cbms</RefSchemaName>
       <RefTableName>employee</RefTableName>
       <RefColNames>eid</RefColNames>
     </foreign-key>
-    <column id="258" parent="243" name="a_name">
+    <column id="259" parent="243" name="a_name">
       <Position>1</Position>
       <Comment>账号</Comment>
       <DataType>varchar(22)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="243" name="password">
+    <column id="260" parent="243" name="password">
       <Position>2</Position>
       <Comment>密码</Comment>
       <DataType>varchar(22)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="244" name="coffee_id">
+    <column id="261" parent="244" name="coffee_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="244" name="coffee_image">
+    <column id="262" parent="244" name="coffee_image">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="244" name="coffee_type">
+    <column id="263" parent="244" name="coffee_type">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="244" name="coffee_price">
+    <column id="264" parent="244" name="coffee_price">
       <Position>4</Position>
       <DataType>decimal(10,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="244" name="coffee_details">
+    <column id="265" parent="244" name="coffee_details">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="244" name="coffee_statu">
+    <column id="266" parent="244" name="coffee_statu">
       <Position>6</Position>
       <DataType>int(2)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="244" name="type_id">
+    <column id="267" parent="244" name="type_id">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="267" parent="244" name="PRIMARY">
+    <index id="268" parent="244" name="type_id">
+      <ColNames>type_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="269" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>coffee_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="268" parent="245" name="sid">
+    <column id="270" parent="245" name="sid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="245" name="type_id">
+    <column id="271" parent="245" name="type_id">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="245" name="type">
+    <column id="272" parent="245" name="type">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="271" parent="245" name="PRIMARY">
+    <index id="273" parent="245" name="type_id">
+      <ColNames>type_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="274" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="272" parent="246" name="eid">
+    <column id="275" parent="246" name="eid">
       <Position>1</Position>
       <Comment>用户ID</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="246" name="username">
+    <column id="276" parent="246" name="username">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="246" name="e_mobile">
+    <column id="277" parent="246" name="e_mobile">
       <Position>3</Position>
       <Comment>手机号码</Comment>
       <DataType>varchar(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="246" name="salary">
+    <column id="278" parent="246" name="salary">
       <Position>4</Position>
       <Comment>工资</Comment>
       <DataType>decimal(10,2 digit)|0s</DataType>
@@ -1116,7 +1125,7 @@
       <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="246" name="jion_date">
+    <column id="279" parent="246" name="jion_date">
       <Position>5</Position>
       <Comment>入职时间</Comment>
       <DataType>timestamp|0s</DataType>
@@ -1124,14 +1133,14 @@
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="277" parent="246" name="e_level">
+    <column id="280" parent="246" name="e_level">
       <Position>6</Position>
       <Comment>员工职位</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="246" name="is_supper">
+    <column id="281" parent="246" name="is_supper">
       <Position>7</Position>
       <Comment>员工等级</Comment>
       <DataType>tinyint(4)|0s</DataType>
@@ -1139,7 +1148,7 @@
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="246" name="status">
+    <column id="282" parent="246" name="status">
       <Position>8</Position>
       <Comment>1 表示 在职 0 表示离职</Comment>
       <DataType>tinyint(4)|0s</DataType>
@@ -1147,131 +1156,131 @@
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="280" parent="246" name="username">
+    <index id="283" parent="246" name="username">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="281" parent="246" name="PRIMARY">
+    <key id="284" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>eid</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="282" parent="246" name="username">
+    <key id="285" parent="246" name="username">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>
-    <column id="283" parent="247" name="ice_id">
+    <column id="286" parent="247" name="ice_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="247" name="ice_image">
+    <column id="287" parent="247" name="ice_image">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="247" name="ice_type">
+    <column id="288" parent="247" name="ice_type">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="247" name="ice_price">
+    <column id="289" parent="247" name="ice_price">
       <Position>4</Position>
       <DataType>decimal(10,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="247" name="ice_details">
+    <column id="290" parent="247" name="ice_details">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="247" name="ice_statu">
+    <column id="291" parent="247" name="ice_statu">
       <Position>6</Position>
       <DataType>int(2)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="247" name="type_id">
+    <column id="292" parent="247" name="type_id">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="290" parent="247" name="PRIMARY">
+    <key id="293" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ice_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="291" parent="248" name="else_id">
+    <column id="294" parent="248" name="else_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="248" name="else_image">
+    <column id="295" parent="248" name="else_image">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="248" name="else_type">
+    <column id="296" parent="248" name="else_type">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="248" name="else_price">
+    <column id="297" parent="248" name="else_price">
       <Position>4</Position>
       <DataType>decimal(10,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="248" name="else_details">
+    <column id="298" parent="248" name="else_details">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="248" name="else_statu">
+    <column id="299" parent="248" name="else_statu">
       <Position>6</Position>
       <DataType>int(2)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="248" name="type_id">
+    <column id="300" parent="248" name="type_id">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="298" parent="248" name="PRIMARY">
+    <key id="301" parent="248" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>else_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="299" parent="249" name="i_id">
+    <column id="302" parent="249" name="i_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="249" name="eid">
+    <column id="303" parent="249" name="eid">
       <Position>2</Position>
       <Comment>用户ID</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="249" name="i_img">
+    <column id="304" parent="249" name="i_img">
       <Position>3</Position>
       <Comment>员工照片</Comment>
       <DataType>varchar(255)|0s</DataType>
@@ -1279,65 +1288,94 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="302" parent="249" name="fk_imgas_eid">
+    <index id="305" parent="249" name="fk_imgas_eid">
       <ColNames>eid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="303" parent="249" name="PRIMARY">
+    <key id="306" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>i_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="304" parent="249" name="fk_imgas_eid">
+    <foreign-key id="307" parent="249" name="fk_imgas_eid">
       <ColNames>eid</ColNames>
       <RefSchemaName>cbms</RefSchemaName>
       <RefTableName>employee</RefTableName>
       <RefColNames>eid</RefColNames>
     </foreign-key>
-    <column id="305" parent="250" name="steak_id">
+    <column id="308" parent="250" name="nav_id">
+      <Position>1</Position>
+      <Comment>导航条ID</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="309" parent="250" name="nav_name">
+      <Position>2</Position>
+      <Comment>导航条名字</Comment>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="310" parent="250" name="nav_name">
+      <ColNames>nav_name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="311" parent="250" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>nav_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="312" parent="250" name="nav_name">
+      <ColNames>nav_name</ColNames>
+      <UnderlyingIndexName>nav_name</UnderlyingIndexName>
+    </key>
+    <column id="313" parent="251" name="steak_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="250" name="steak_image">
+    <column id="314" parent="251" name="steak_image">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="250" name="steak_type">
+    <column id="315" parent="251" name="steak_type">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="250" name="steak_price">
+    <column id="316" parent="251" name="steak_price">
       <Position>4</Position>
       <DataType>decimal(10,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="250" name="steak_details">
+    <column id="317" parent="251" name="steak_details">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="250" name="steak_statu">
+    <column id="318" parent="251" name="steak_statu">
       <Position>6</Position>
       <DataType>int(2)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="250" name="type_id">
+    <column id="319" parent="251" name="type_id">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="312" parent="250" name="PRIMARY">
+    <key id="320" parent="251" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>steak_id</ColNames>
       <Primary>1</Primary>
