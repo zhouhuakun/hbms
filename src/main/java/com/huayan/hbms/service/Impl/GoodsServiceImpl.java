@@ -12,6 +12,7 @@ import com.huayan.hbms.service.GoodsService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class GoodsServiceImpl implements GoodsService {
@@ -23,6 +24,12 @@ public class GoodsServiceImpl implements GoodsService {
     IceMapper iceMapper;
     @Resource
     IelseMapper ielseMapper;
+
+    @Override
+    public List<Coffee> findCoffeeAll() {
+        List<Coffee> coffees = coffeeMapper.findAll();
+        return coffees;
+    }
 
     @Override
     public Coffee findCoffee(int id) {
@@ -46,6 +53,11 @@ public class GoodsServiceImpl implements GoodsService {
     public int insertCoffee(Coffee coffee) {
         int insert = coffeeMapper.insert(coffee);
         return insert;
+    }
+
+    @Override
+    public List<Steak> findSteakAll() {
+        return steakMapper.findAll();
     }
 
     @Override
@@ -73,6 +85,11 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
+    public List<Ice> findIceAll() {
+        return iceMapper.findAll();
+    }
+
+    @Override
     public Ice findIce(int id) {
         Ice ice = iceMapper.findbyId(id);
         return ice;
@@ -94,6 +111,11 @@ public class GoodsServiceImpl implements GoodsService {
     public int insertIce(Ice ice) {
         int insert = iceMapper.insert(ice);
         return insert;
+    }
+
+    @Override
+    public List<Ielse> findIelseAll() {
+        return ielseMapper.findAll();
     }
 
     @Override

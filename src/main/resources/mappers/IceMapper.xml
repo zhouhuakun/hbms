@@ -13,6 +13,11 @@
     <result column="ice_statu" jdbcType="INTEGER" property="iceStatu" />
     <result column="type_id" jdbcType="VARCHAR" property="typeId" />
   </resultMap>
+  <select id="findAll" resultMap="Base_Ice">
+    SELECT  ice_id,ice_image,ice_type,ice_price,ice_details,type_id
+    FROM ice WHERE ice_statu=1;
+  </select>
+
 <select id="findbyId" resultMap="Base_Ice">
     SELECT  ice_id,ice_image,ice_type,ice_price,ice_details,ice_statu,type_id
   FROM ice WHERE ice_id=#{IceId}

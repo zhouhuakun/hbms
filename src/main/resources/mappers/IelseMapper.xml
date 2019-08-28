@@ -13,10 +13,16 @@
     <result column="else_statu" property="elseStatu" jdbcType="INTEGER" />
     <result column="type_id" property="typeId" jdbcType="VARCHAR" />
   </resultMap>
+  <select id="findAll" resultMap="BaseResultMap">
+    SELECT  else_id, else_image, else_type, else_price, else_details, type_id
+    FROM ielse WHERE else_statu=1
+  </select>
+
   <select id="findbyId" resultMap="BaseResultMap">
     SELECT  else_id, else_image, else_type, else_price, else_details, else_statu, type_id
     FROM ielse WHERE else_id=#{elseId}
   </select>
+
   <update id="update">
     UPDATE ielse  SET
     else_type =#{ielse.elseType} ,
