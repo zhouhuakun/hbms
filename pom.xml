@@ -22,7 +22,7 @@
     <slf4j.version>1.7.21</slf4j.version>
     <spring.jdbc.version>4.3.17.RELEASE</spring.jdbc.version>
     <spring.version>5.1.9.RELEASE</spring.version>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
   </properties>
 
   <dependencies>
